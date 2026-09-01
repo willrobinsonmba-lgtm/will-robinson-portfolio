@@ -10,40 +10,294 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
+
 	<body>
 		<Header />
+
 		<main>
-			<h1>🧑‍🚀 Hello, I'm Will Robinson.</h1>
-			<p>
-	I’m a marketing leader specializing in restaurant growth, digital strategy,
-	local-store marketing, SEO, loyalty, email, and franchise support.
-</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<section class="hero">
+				<p class="eyebrow">Restaurant Marketing & Digital Growth</p>
+				<h1>Hello, I'm Will Robinson.</h1>
+				<p class="introduction">
+					I help restaurant brands grow through digital strategy, local-store
+					marketing, SEO, loyalty, email, online ordering, and franchise support.
+				</p>
+				<div class="hero-links">
+					<a class="primary-button" href="#work">View my work</a>
+					<a class="secondary-button" href="/about">About me</a>
+				</div>
+			</section>
+
+			<section class="expertise">
+				<p class="section-label">Areas of expertise</p>
+				<div class="expertise-list">
+					<span>Digital Strategy</span>
+					<span>Restaurant Marketing</span>
+					<span>Local SEO</span>
+					<span>Email & Loyalty</span>
+					<span>Online Ordering</span>
+					<span>Franchise Support</span>
+				</div>
+			</section>
+
+			<section class="work" id="work">
+				<div class="section-heading">
+					<div>
+						<p class="section-label">Selected work</p>
+						<h2>Turning strategy into measurable growth</h2>
+					</div>
+					<p>
+						A selection of projects spanning customer acquisition, digital
+						experience, local marketing, and brand growth.
+					</p>
+				</div>
+
+				<div class="project-grid">
+					<article>
+						<p class="project-number">01</p>
+						<h3>Multi-Location SEO</h3>
+						<p>
+							Improving local visibility and creating stronger digital
+							experiences across restaurant locations.
+						</p>
+						<span>Case study coming soon</span>
+					</article>
+
+					<article>
+						<p class="project-number">02</p>
+						<h3>Online Ordering & Conversion</h3>
+						<p>
+							Identifying customer friction and opportunities to improve the
+							digital ordering journey.
+						</p>
+						<span>Case study coming soon</span>
+					</article>
+
+					<article>
+						<p class="project-number">03</p>
+						<h3>Loyalty & Email Marketing</h3>
+						<p>
+							Using customer communication, offers, and performance analysis
+							to encourage repeat visits.
+						</p>
+						<span>Case study coming soon</span>
+					</article>
+
+					<article>
+						<p class="project-number">04</p>
+						<h3>Campaigns & Local-Store Marketing</h3>
+						<p>
+							Connecting brand-level campaigns with practical tools and
+							support for local restaurant operators.
+						</p>
+						<span>Case study coming soon</span>
+					</article>
+				</div>
+			</section>
+
+			<section class="closing">
+				<p class="section-label">Let's connect</p>
+				<h2>Interested in restaurant marketing and digital growth?</h2>
+				<p>
+					This portfolio is growing along with the work. More detailed case
+					studies will be added soon.
+				</p>
+			</section>
 		</main>
+
 		<Footer />
 	</body>
 </html>
+
+<style>
+	main {
+		margin: 0 auto;
+		max-width: 1200px;
+		padding: 0 2rem;
+	}
+
+	.hero {
+		max-width: 900px;
+		padding: 8rem 0 7rem;
+	}
+
+	.eyebrow,
+	.section-label {
+		color: #2457ff;
+		font-size: 0.78rem;
+		font-weight: 800;
+		letter-spacing: 0.14em;
+		margin-bottom: 1.25rem;
+		text-transform: uppercase;
+	}
+
+	h1 {
+		font-size: clamp(3.3rem, 9vw, 7.5rem);
+		letter-spacing: -0.065em;
+		line-height: 0.92;
+		margin: 0;
+	}
+
+	.introduction {
+		color: #394150;
+		font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+		line-height: 1.5;
+		margin: 2.25rem 0 0;
+		max-width: 760px;
+	}
+
+	.hero-links {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-top: 2.5rem;
+	}
+
+	.primary-button,
+	.secondary-button {
+		border-radius: 999px;
+		display: inline-block;
+		font-weight: 700;
+		padding: 0.9rem 1.4rem;
+		text-decoration: none;
+	}
+
+	.primary-button {
+		background: #111827;
+		color: white;
+	}
+
+	.secondary-button {
+		border: 1px solid #cbd5e1;
+		color: #111827;
+	}
+
+	.expertise {
+		border-bottom: 1px solid #dbe1e8;
+		border-top: 1px solid #dbe1e8;
+		padding: 2.5rem 0;
+	}
+
+	.expertise-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+	}
+
+	.expertise-list span {
+		background: #f1f5f9;
+		border-radius: 999px;
+		color: #263244;
+		font-size: 0.9rem;
+		font-weight: 650;
+		padding: 0.65rem 1rem;
+	}
+
+	.work {
+		padding: 7rem 0;
+	}
+
+	.section-heading {
+		align-items: end;
+		display: grid;
+		gap: 3rem;
+		grid-template-columns: 1.4fr 0.6fr;
+		margin-bottom: 3rem;
+	}
+
+	h2 {
+		font-size: clamp(2.25rem, 5vw, 4.25rem);
+		letter-spacing: -0.045em;
+		line-height: 1;
+		margin: 0;
+	}
+
+	.section-heading > p,
+	.closing > p:last-child {
+		color: #566173;
+		font-size: 1.05rem;
+		line-height: 1.65;
+		margin: 0;
+	}
+
+	.project-grid {
+		display: grid;
+		gap: 1rem;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	article {
+		background: #f6f8fb;
+		border: 1px solid #e2e7ee;
+		border-radius: 18px;
+		min-height: 280px;
+		padding: 2rem;
+	}
+
+	.project-number {
+		color: #2457ff;
+		font-size: 0.8rem;
+		font-weight: 800;
+	}
+
+	h3 {
+		font-size: 1.7rem;
+		letter-spacing: -0.025em;
+		margin: 3.5rem 0 1rem;
+	}
+
+	article > p:not(.project-number) {
+		color: #566173;
+		line-height: 1.6;
+	}
+
+	article span {
+		color: #7a8493;
+		display: block;
+		font-size: 0.82rem;
+		font-weight: 700;
+		margin-top: 1.5rem;
+		text-transform: uppercase;
+	}
+
+	.closing {
+		background: #111827;
+		border-radius: 24px;
+		color: white;
+		margin-bottom: 5rem;
+		padding: clamp(2rem, 6vw, 5rem);
+	}
+
+	.closing h2 {
+		max-width: 850px;
+	}
+
+	.closing > p:last-child {
+		color: #cbd5e1;
+		margin-top: 1.5rem;
+		max-width: 650px;
+	}
+
+	@media (max-width: 700px) {
+		main {
+			padding: 0 1.25rem;
+		}
+
+		.hero {
+			padding: 5rem 0;
+		}
+
+		.section-heading,
+		.project-grid {
+			grid-template-columns: 1fr;
+		}
+
+		.section-heading {
+			gap: 1.5rem;
+		}
+
+		.work {
+			padding: 5rem 0;
+		}
+	}
+</style>

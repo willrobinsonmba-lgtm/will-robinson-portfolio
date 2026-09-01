@@ -10,106 +10,109 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-
 	<body>
 		<Header />
-
 		<main>
-			<section class="hero">
-				<p class="eyebrow">Restaurant Marketing & Digital Growth</p>
-				<h1>Hello, I'm Will Robinson.</h1>
+			<section class="hero" aria-labelledby="intro-title">
+				<p class="eyebrow">Will Robinson · Restaurant Marketing</p>
+				<h1 id="intro-title">I turn restaurant marketing complexity into measurable growth.</h1>
 				<p class="introduction">
-					I help restaurant brands grow through digital strategy, local-store
-					marketing, SEO, loyalty, email, online ordering, and franchise support.
+					I connect brand strategy, digital experience, local-store execution, and
+					performance analysis to help restaurant systems grow more effectively.
 				</p>
 				<div class="hero-links">
-					<a class="primary-button" href="#work">View my work</a>
-					<a class="secondary-button" href="/about">About me</a>
+					<a class="primary-button" href="#work">Explore my work</a>
+					<a class="text-link" href="/about">More about me <span aria-hidden="true">→</span></a>
 				</div>
 			</section>
 
-			<section class="expertise">
-				<p class="section-label">Areas of expertise</p>
-				<div class="expertise-list">
-					<span>Digital Strategy</span>
-					<span>Restaurant Marketing</span>
-					<span>Local SEO</span>
-					<span>Email & Loyalty</span>
-					<span>Online Ordering</span>
-					<span>Franchise Support</span>
-				</div>
-			</section>
-
-			<section class="work" id="work">
-				<div class="section-heading">
+			<section class="capabilities" aria-labelledby="capabilities-title">
+				<p class="section-label">Capabilities</p>
+				<h2 id="capabilities-title">Strategy connected to execution</h2>
+				<div class="capability-grid">
 					<div>
-						<p class="section-label">Selected work</p>
-						<h2>Turning strategy into measurable growth</h2>
+						<h3>Digital growth</h3>
+						<p>Online ordering, conversion analysis, SEO, location experiences, and customer acquisition.</p>
 					</div>
+					<div>
+						<h3>Customer relationships</h3>
+						<p>Email, loyalty, offers, customer journeys, and repeat-visit strategy.</p>
+					</div>
+					<div>
+						<h3>Franchise support</h3>
+						<p>Practical programs and tools that connect brand priorities with local-store needs.</p>
+					</div>
+				</div>
+			</section>
+
+			<section class="work" id="work" aria-labelledby="work-title">
+				<div class="section-heading">
+					<p class="section-label">Selected work</p>
+					<h2 id="work-title">A portfolio built around real restaurant challenges</h2>
 					<p>
-						A selection of projects spanning customer acquisition, digital
-						experience, local marketing, and brand growth.
+						These focus areas represent work across Ledo Pizza marketing,
+						digital operations, customer engagement, and franchise support.
+						Detailed case studies will be added as approved materials are prepared.
 					</p>
 				</div>
 
-				<div class="project-grid">
+				<div class="project-list">
 					<article>
 						<p class="project-number">01</p>
-						<h3>Multi-Location SEO</h3>
-						<p>
-							Improving local visibility and creating stronger digital
-							experiences across restaurant locations.
-						</p>
-						<span>Case study coming soon</span>
+						<div>
+							<p class="project-category">Digital experience</p>
+							<h3>Online ordering and conversion</h3>
+							<p>Finding friction in the ordering journey and turning performance data into clearer priorities.</p>
+						</div>
 					</article>
-
 					<article>
 						<p class="project-number">02</p>
-						<h3>Online Ordering & Conversion</h3>
-						<p>
-							Identifying customer friction and opportunities to improve the
-							digital ordering journey.
-						</p>
-						<span>Case study coming soon</span>
+						<div>
+							<p class="project-category">Local visibility</p>
+							<h3>Multi-location SEO and store marketing</h3>
+							<p>Improving how restaurant locations appear, communicate, and compete in their local markets.</p>
+						</div>
 					</article>
-
 					<article>
 						<p class="project-number">03</p>
-						<h3>Loyalty & Email Marketing</h3>
-						<p>
-							Using customer communication, offers, and performance analysis
-							to encourage repeat visits.
-						</p>
-						<span>Case study coming soon</span>
+						<div>
+							<p class="project-category">Customer retention</p>
+							<h3>Loyalty and email strategy</h3>
+							<p>Using segmentation, offers, and performance analysis to strengthen customer relationships.</p>
+						</div>
 					</article>
-
 					<article>
 						<p class="project-number">04</p>
-						<h3>Campaigns & Local-Store Marketing</h3>
-						<p>
-							Connecting brand-level campaigns with practical tools and
-							support for local restaurant operators.
-						</p>
-						<span>Case study coming soon</span>
+						<div>
+							<p class="project-category">Brand activation</p>
+							<h3>Campaigns and franchise execution</h3>
+							<p>Translating brand-level ideas into practical programs that local restaurant operators can use.</p>
+						</div>
 					</article>
 				</div>
 			</section>
 
-			<section class="closing">
-				<p class="section-label">Let's connect</p>
-				<h2>Interested in restaurant marketing and digital growth?</h2>
-				<p>
-					This portfolio is growing along with the work. More detailed case
-					studies will be added soon.
-				</p>
+			<section class="closing" aria-labelledby="closing-title">
+				<p class="section-label">The next chapter</p>
+				<h2 id="closing-title">Building stronger restaurant brands through useful, connected marketing.</h2>
+				<a class="closing-link" href="/about">Read about my experience <span aria-hidden="true">→</span></a>
 			</section>
 		</main>
-
 		<Footer />
 	</body>
 </html>
 
 <style>
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+
+	:global(body) {
+		background: #f5f5f7;
+		color: #1d1d1f;
+		font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+	}
+
 	main {
 		margin: 0 auto;
 		max-width: 1200px;
@@ -117,187 +120,217 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	}
 
 	.hero {
-		max-width: 900px;
-		padding: 8rem 0 7rem;
+		max-width: 1050px;
+		padding: clamp(6rem, 12vw, 10rem) 0 clamp(6rem, 10vw, 9rem);
 	}
 
 	.eyebrow,
-	.section-label {
-		color: #2457ff;
+	.section-label,
+	.project-category {
+		color: #6e6e73;
 		font-size: 0.78rem;
-		font-weight: 800;
-		letter-spacing: 0.14em;
-		margin-bottom: 1.25rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		margin: 0 0 1.25rem;
 		text-transform: uppercase;
 	}
 
 	h1 {
-		font-size: clamp(3.3rem, 9vw, 7.5rem);
-		letter-spacing: -0.065em;
-		line-height: 0.92;
+		color: #1d1d1f;
+		font-size: clamp(3.25rem, 7.5vw, 7rem);
+		font-weight: 700;
+		letter-spacing: -0.055em;
+		line-height: 0.96;
 		margin: 0;
+		text-wrap: balance;
 	}
 
 	.introduction {
-		color: #394150;
-		font-size: clamp(1.25rem, 2.4vw, 1.75rem);
-		line-height: 1.5;
+		color: #515154;
+		font-size: clamp(1.2rem, 2.2vw, 1.65rem);
+		letter-spacing: -0.015em;
+		line-height: 1.45;
 		margin: 2.25rem 0 0;
 		max-width: 760px;
 	}
 
 	.hero-links {
+		align-items: center;
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1rem;
-		margin-top: 2.5rem;
-	}
-
-	.primary-button,
-	.secondary-button {
-		border-radius: 999px;
-		display: inline-block;
-		font-weight: 700;
-		padding: 0.9rem 1.4rem;
-		text-decoration: none;
+		gap: 1.5rem;
+		margin-top: 2.75rem;
 	}
 
 	.primary-button {
-		background: #111827;
-		color: white;
-	}
-
-	.secondary-button {
-		border: 1px solid #cbd5e1;
-		color: #111827;
-	}
-
-	.expertise {
-		border-bottom: 1px solid #dbe1e8;
-		border-top: 1px solid #dbe1e8;
-		padding: 2.5rem 0;
-	}
-
-	.expertise-list {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.75rem;
-	}
-
-	.expertise-list span {
-		background: #f1f5f9;
+		background: #0071e3;
 		border-radius: 999px;
-		color: #263244;
-		font-size: 0.9rem;
+		color: #fff;
+		display: inline-flex;
+		font-size: 0.95rem;
 		font-weight: 650;
-		padding: 0.65rem 1rem;
+		padding: 0.85rem 1.25rem;
+		text-decoration: none;
+		transition: background-color 140ms ease-out, transform 100ms ease-out;
 	}
 
+	.primary-button:hover {
+		background: #0077ed;
+		color: #fff;
+	}
+
+	.primary-button:active {
+		transform: scale(0.97);
+	}
+
+	.text-link,
+	.closing-link {
+		color: #0066cc;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.text-link:hover,
+	.closing-link:hover {
+		text-decoration: underline;
+	}
+
+	a:focus-visible {
+		border-radius: 6px;
+		outline: 3px solid #0071e3;
+		outline-offset: 4px;
+	}
+
+	.capabilities,
 	.work {
-		padding: 7rem 0;
-	}
-
-	.section-heading {
-		align-items: end;
-		display: grid;
-		gap: 3rem;
-		grid-template-columns: 1.4fr 0.6fr;
-		margin-bottom: 3rem;
+		border-top: 1px solid rgba(0, 0, 0, 0.12);
+		padding: clamp(5rem, 9vw, 8rem) 0;
 	}
 
 	h2 {
-		font-size: clamp(2.25rem, 5vw, 4.25rem);
+		color: #1d1d1f;
+		font-size: clamp(2.35rem, 5vw, 4.75rem);
+		font-weight: 700;
 		letter-spacing: -0.045em;
-		line-height: 1;
+		line-height: 1.02;
 		margin: 0;
+		text-wrap: balance;
 	}
 
-	.section-heading > p,
-	.closing > p:last-child {
-		color: #566173;
-		font-size: 1.05rem;
-		line-height: 1.65;
-		margin: 0;
-	}
-
-	.project-grid {
+	.capability-grid {
 		display: grid;
-		gap: 1rem;
-		grid-template-columns: repeat(2, 1fr);
+		gap: 3rem;
+		grid-template-columns: repeat(3, 1fr);
+		margin-top: 4rem;
 	}
 
-	article {
-		background: #f6f8fb;
-		border: 1px solid #e2e7ee;
-		border-radius: 18px;
-		min-height: 280px;
-		padding: 2rem;
+	.capability-grid h3,
+	.project-list h3 {
+		color: #1d1d1f;
+		font-size: 1.45rem;
+		letter-spacing: -0.025em;
+		line-height: 1.15;
+		margin: 0 0 0.8rem;
+	}
+
+	.capability-grid p,
+	.project-list p,
+	.section-heading > p {
+		color: #6e6e73;
+		font-size: 1rem;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	.section-heading {
+		max-width: 900px;
+	}
+
+	.section-heading > p {
+		font-size: 1.1rem;
+		margin-top: 1.75rem;
+		max-width: 720px;
+	}
+
+	.project-list {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+		margin-top: 4rem;
+	}
+
+	.project-list article {
+		align-items: start;
+		border-top: 1px solid rgba(0, 0, 0, 0.12);
+		display: grid;
+		gap: 2rem;
+		grid-template-columns: 80px 1fr;
+		padding: 2.5rem 0;
 	}
 
 	.project-number {
-		color: #2457ff;
-		font-size: 0.8rem;
-		font-weight: 800;
+		color: #86868b !important;
+		font-size: 0.82rem !important;
+		font-variant-numeric: tabular-nums;
 	}
 
-	h3 {
-		font-size: 1.7rem;
-		letter-spacing: -0.025em;
-		margin: 3.5rem 0 1rem;
+	.project-category {
+		font-size: 0.7rem;
+		margin-bottom: 0.65rem;
 	}
 
-	article > p:not(.project-number) {
-		color: #566173;
-		line-height: 1.6;
-	}
-
-	article span {
-		color: #7a8493;
-		display: block;
-		font-size: 0.82rem;
-		font-weight: 700;
-		margin-top: 1.5rem;
-		text-transform: uppercase;
+	.project-list article > div > p:last-child {
+		max-width: 680px;
 	}
 
 	.closing {
-		background: #111827;
-		border-radius: 24px;
-		color: white;
-		margin-bottom: 5rem;
-		padding: clamp(2rem, 6vw, 5rem);
+		background: #1d1d1f;
+		border-radius: 2rem;
+		color: #fff;
+		margin: 0 0 5rem;
+		padding: clamp(2.5rem, 7vw, 6rem);
+	}
+
+	.closing .section-label {
+		color: #a1a1a6;
 	}
 
 	.closing h2 {
-		max-width: 850px;
+		color: #f5f5f7;
+		max-width: 900px;
 	}
 
-	.closing > p:last-child {
-		color: #cbd5e1;
-		margin-top: 1.5rem;
-		max-width: 650px;
+	.closing-link {
+		color: #2997ff;
+		display: inline-block;
+		margin-top: 2rem;
 	}
 
-	@media (max-width: 700px) {
+	@media (max-width: 760px) {
 		main {
 			padding: 0 1.25rem;
 		}
 
-		.hero {
-			padding: 5rem 0;
-		}
-
-		.section-heading,
-		.project-grid {
+		.capability-grid {
+			gap: 2.5rem;
 			grid-template-columns: 1fr;
 		}
 
-		.section-heading {
-			gap: 1.5rem;
+		.project-list article {
+			gap: 1rem;
+			grid-template-columns: 1fr;
 		}
 
-		.work {
-			padding: 5rem 0;
+		.closing {
+			border-radius: 1.5rem;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		:global(html) {
+			scroll-behavior: auto;
+		}
+
+		.primary-button {
+			transition: none;
 		}
 	}
 </style>
